@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>{% block title %}Welcome!{% endblock %}</title>
+        <meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+        {% block stylesheets %}
+
+        <link rel="stylesheet" href="{{ asset('css/navigation-icons.css') }} ">	
+       
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+
+		 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css">
+	 
+		<link rel="stylesheet" type="text/css" href="{{ asset('fonts/Linearicons-Free-v1.0.0/icon-font.min.css') }}">
+	 
+		<link rel="stylesheet" type="text/css" href="{{ asset('/vendor/animate/animate.css') }}">
+	 
+		<link rel="stylesheet" type="text/css" href="{{ asset('/vendor/css-hamburgers/hamburgers.min.css') }}">
+	 
+		<link rel="stylesheet" type="text/css" href="{{ asset('/vendor/select2/select2.min.css') }}">
+	 
+		<link rel="stylesheet" type="text/css" href="{{ asset('css/util.css') }}">
+		
+		<link rel="stylesheet" type="text/css" href="{{ asset('css/main.css') }}">
+
+		<link rel="stylesheet" type="text/css" href="//cdn.datatables.net/1.10.19/css/jquery.dataTables.min.css">
+ 
+
+        {% endblock %}
+    </head>
+    <body>
+
+    	{% if is_granted('IS_AUTHENTICATED_FULLY') %}
+
+    		<div class="header">
+		<a href="#" class="branding"><img src="{{ asset('images/company-logo.png') }}" width="10%"></a>
+	</div>
+
+	<nav class="menu-navigation-icons">
+		
+		<a href="{{ path('dashboard') }}" class="menu-default active"><i class="fa fa-tachometer-alt"></i><span>Dashboard</span></a>
+		<a href="{{ path('clients') }}" class="menu-default"><i class="fas fa-users"></i><span>Clients</span></a>
+		<a href="{{ path('estimate') }}" class="menu-default"><i class="fas fa-list"></i><span>Estimate</span></a>
+		<a href="{{ path('scheduling') }}" class="menu-default"><i class="far fa-calendar-alt"></i><span>Scheduling</span></a>
+		<a href="{{ path('rugs') }}" class="menu-default"><i class="fas fa-stroopwafel"></i><span>Rugs</span></a>
+		 <a href="{{ path('client-profile') }}" class="menu-default"><i class="fas fa-chalkboard-teacher"></i><span>Client Profile</span></a>
+		<a href="{{ path('marketing') }}" class="menu-default"><i class="fas fa-bullhorn"></i><span>Marketing</span></a>
+		<a href="{{ path('users') }}" class="menu-default"><i class="fas fa-network-wired"></i><span>Users</span></a>
+		<a href="{{ path('reports') }}" class="menu-default"><i class="fas fa-poll"></i><span>Reports</span></a>
+		<a href="{{ path('settings') }}" class="menu-default"><i class="fa fa-cog"></i><span>Settings</span></a>
+		 <a href="{{ path('manage') }}" class="menu-default"><i class="fa fa-cogs"></i><span>Manage</span></a>
+	</nav>
+
+    	{% endif %}	
+
+
+        {% block body %}{% endblock %}
+        {% block javascripts %}
+
+        	
+
+        	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+ 
+			<script src="{{ asset('/vendor/bootstrap/js/popper.js') }} "></script>
+			
+			<script src="{{ asset('/vendor/bootstrap/js/bootstrap.min.js') }} "></script>		 
+			<script src="{{ asset('/vendor/select2/select2.min.js') }} "></script>
+		 
+			<script src="{{ asset('js/main.js') }} "></script>
+
+			<script type="text/javascript" src="//cdn.datatables.net/1.10.19/js/jquery.dataTables.min.js"></script>
+			<script type="text/javascript">
+			$(document).ready(function(){
+
+						$('#tblappointment').DataTable({
+							"searching": false,
+							"paging":   true,
+			        		"ordering": true,
+							"info":     true,
+							"responsive": true
+						});
+			});	
+			</script>
+
+
+        {% endblock %}
+    </body>
+</html>

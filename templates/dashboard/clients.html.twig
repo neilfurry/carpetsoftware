@@ -1,0 +1,252 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Clients | Cleaning and Maintenance Software {% endblock %}
+
+{% block body %} 
+
+	<div class="container">
+ 
+ 	<div class="col-md-12 mbottom">
+		<label>Client Search</label>
+		<input type="text" name="search" class="form-control" placeholder="Search Client...">
+	</div>
+ 
+ 	<div class="col-md-6">
+		
+		<div class="panel panel-default">
+		  <div class="panel-heading"><i class="fas fa-info-circle"></i> Client's Information </div>
+		  <div class="panel-body">
+		  		<form>
+						<div class="col-md-6">
+								<label>Company</label>
+								<select name="" class="form-control"></select>
+								
+								<label>Customer First Name</label>
+								<input type="text" class="form-control">
+								
+								<label>Customer Email</label>
+								<input type="text" class="form-control">
+								
+								<label>Customer Home Phone</label>
+								<input type="text" class="form-control">
+								
+								<label>Customer Cellphone</label>
+								<input type="text" class="form-control">
+								
+								<label>Customer City</label>
+								<input type="text" class="form-control">
+								
+								<label>Customer State</label>
+								<input type="text" class="form-control">
+								
+								<label>Customer Zone</label>
+								<input type="text" class="form-control">
+								
+								<label>1st Time Hear of Us</label>
+								<input type="text" class="form-control">
+						
+						</div>
+						<div class="col-md-6">
+							<label>Customer Last Name</label>
+								<input type="text" class="form-control">
+								
+							<label>Customer Company</label>
+								<input type="text" class="form-control">
+								
+							<label>Customer Work Phone</label>
+								<input type="text" class="form-control">
+								
+							<label>Customer Address</label>
+								<input type="text" class="form-control">
+							
+							<label>Customer Unit No.</label>
+								<input type="text" class="form-control">
+								
+							<label>Customer ZIP Code</label>
+								<input type="text" class="form-control">
+								
+							<label>Referred By</label>
+								<input type="text" class="form-control">
+								
+							<label>Gate Entry Code</label>
+								<input type="text" class="form-control">
+							
+							<label>Address List</label>
+								<select name="" class="form-control"></select>							
+						
+						</div>
+						
+						 <div class="col-md-6 mtop ">
+						 	<button class="btn btn-primary" type="submit" >Submit</button>
+						 </div>	
+						
+						<div class="col-md-12">
+							<label>Client Notes</label>
+							<textarea name="" class="form-control"></textarea>
+						
+						</div>
+						
+						<div class="col-md-6 mtop ">
+						 	<button class="btn btn-primary" type="submit"> Post Note</button>
+						 </div>
+						 
+						 <div class="noteslist col-md-12">
+						 		<table class="stripe" id="tblnotes">
+						<thead>
+							<tr>
+								<th>Date</th>
+								<th>Posted By</th>
+								<th>Notes</th>
+								
+							</tr>
+						</thead>
+						
+						<tbody>
+							<tr>
+								<td>Apr. 01, 2019 8:00AM</td>
+								<td>John R.</td>
+								<td>Return Call by 10:00AM</td>
+							</tr>
+							
+							<tr>
+								<td>Apr. 01, 2019 8:00AM</td>
+								<td>John R.</td>
+								<td>Return Call by 10:00AM</td>
+							</tr>
+							
+							<tr>
+								<td>Apr. 01, 2019 8:00AM</td>
+								<td>John R.</td>
+								<td>Return Call by 10:00AM</td>
+							</tr>
+							
+							
+						</tbody>
+					</table>
+						 
+						 </div>		
+						
+				</form>
+		  </div>
+		</div>
+	
+	</div>
+	
+	<div class="col-md-6">
+		<div class="panel panel-default">
+		  <div class="panel-heading"><i class="fas fa-file-invoice"></i> Estimates / Invoices  <div class="pull-right">Export: <i class="fas fa-file-excel"></i>  <i class="fas fa-file-pdf"></i></div></div>
+		  <div class="panel-body">
+		  		<div class="EstimateList col-md-12">
+						 		<table class="stripe" id="tblEstimates">
+						<thead>
+							<tr>
+								<th>Date Created</th>
+								<th>Estimate</th>
+								<th>Invoice</th>
+								<th>Created By</th>
+								<th>Details</th>
+								<th>Options</th>
+								
+							</tr>
+						</thead>
+						
+						<tbody>
+							<tr>
+								<td>Apr. 01, 2019 8:00AM</td>
+								<td>$105.00</td>
+								<td>$205.00</td>
+								<td>Lisa</td>
+								<td>04-20-2019 (Wed. 10:00am) (Tech: Aaron)</td>
+								<td><button class="btn btn-primary btn-sm">Options</button></td>
+							</tr>
+							
+							<tr>
+								<td>Apr. 01, 2019 8:00AM</td>
+								<td>$105.00</td>
+								<td>$205.00</td>
+								<td>Lisa</td>
+								<td>04-20-2019 (Wed. 10:00am) (Tech: Aaron)</td>
+								<td><button class="btn btn-primary btn-sm">Options</button></td>
+							</tr>
+							
+							<tr>
+								<td>Apr. 01, 2019 8:00AM</td>
+								<td>$105.00</td>
+								<td>$205.00</td>
+								<td>Lisa</td>
+								<td>04-20-2019 (Wed. 10:00am) (Tech: Aaron)</td>
+								<td><button class="btn btn-primary btn-sm">Options</button></td>
+							</tr>
+							
+							
+							
+						</tbody>
+					</table>
+						 
+						 </div>	
+		  
+		  </div>
+		</div>
+		
+		<div class="panel panel-default">
+		  <div class="panel-heading"><i class="fas fa-clipboard-check"></i> Completed Jobs <div class="pull-right">Export: <i class="fas fa-file-excel"></i>  <i class="fas fa-file-pdf"></i></div></div>
+		  <div class="panel-body">
+		  		<div class="EstimateList col-md-12">
+						 		<table class="stripe" id="tblEstimates">
+						<thead>
+							<tr>
+								<th>Date Created</th>
+								<th>Estimate</th>
+								<th>Invoice</th>
+								<th>Created By</th>
+								<th>Details</th>
+								<th>Options</th>
+								
+							</tr>
+						</thead>
+						
+						<tbody>
+							<tr>
+								<td>Apr. 01, 2019 8:00AM</td>
+								<td>$105.00</td>
+								<td>$205.00</td>
+								<td>Lisa</td>
+								<td>04-20-2019 (Wed. 10:00am) (Tech: Aaron)</td>
+								<td><button class="btn btn-primary btn-sm">Options</button></td>
+							</tr>
+							
+							<tr>
+								<td>Apr. 01, 2019 8:00AM</td>
+								<td>$105.00</td>
+								<td>$205.00</td>
+								<td>Lisa</td>
+								<td>04-20-2019 (Wed. 10:00am) (Tech: Aaron)</td>
+								<td><button class="btn btn-primary btn-sm">Options</button></td>
+							</tr>
+							
+							<tr>
+								<td>Apr. 01, 2019 8:00AM</td>
+								<td>$105.00</td>
+								<td>$205.00</td>
+								<td>Lisa</td>
+								<td>04-20-2019 (Wed. 10:00am) (Tech: Aaron)</td>
+								<td><button class="btn btn-primary btn-sm">Options</button></td>
+							</tr>
+							
+							
+							
+						</tbody>
+					</table>
+						 
+						 </div>	
+		  
+		  </div>
+		</div>
+	
+	</div>
+ 
+ 
+ </div>
+
+
+{% endblock %}

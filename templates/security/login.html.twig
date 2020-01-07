@@ -1,0 +1,57 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}User Login | Cleaning and Maintenance Software{% endblock %}
+
+{% block body %}
+
+
+    <div class="limiter">
+        <div class="container-login100" style="background-image: url('{{ asset('images/img-01.jpg') }}');">
+            <div class="wrap-login100">
+                <form class="login100-form validate-form" method="post" action="{{ path('login') }}">
+                    <div class="login100-form-avatar">
+                        <img src="{{ asset('images/company-logo.png') }}" alt="AVATAR">
+                    </div>
+
+                    <span class="login100-form-title p-t-20 p-b-45">
+                       {% if error %}
+
+                        <span class="error">{{ error.messageKey }}</span>
+
+                        {% endif %}
+                    </span>
+
+                    
+
+                    <div class="wrap-input100 validate-input m-b-10" data-validate = "Username is required">
+                        <input class="input100" type="text" name="_username" placeholder="Username" value="{{ last_username }}" >
+                        <span class="focus-input100"></span>
+                        <span class="symbol-input100">
+                            <i class="fa fa-user"></i>
+                        </span>
+                    </div>
+
+                    <div class="wrap-input100 validate-input m-b-10" data-validate = "Password is required">
+                        <input class="input100" type="password" name="_password" >
+                        <span class="focus-input100"></span>
+                        <span class="symbol-input100">
+                            <i class="fa fa-lock"></i>
+                        </span>
+                    </div>
+
+                    <div class="container-login100-form-btn p-t-10">
+                        <button type="submit" class="login100-form-btn">
+                            Login
+                        </button>
+                    </div>
+
+                    
+
+                    
+                </form>
+            </div>
+        </div>
+    </div>
+    
+
+{% endblock %}

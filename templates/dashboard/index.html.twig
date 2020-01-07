@@ -1,0 +1,98 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Dashboard | Cleaning and Maintenance Software {% endblock %}
+
+{% block body %} 
+
+	
+ 
+ <div class="container">
+ 
+ 
+ 	<div class="col-md-6">
+		
+		<div class="panel panel-default">
+		  <div class="panel-heading"><i class="fas fa-chart-pie"></i> Today's Stats</div>
+		  <div class="panel-body">
+		  		<div class="stats-info">
+						<a href="#" class="stats"> 0 <span>Est. Created</span></a>
+						<a href="#" class="stats"> 0 <span>Est. Not Booked</span></a>
+						<a href="#" class="stats"> 0 <span>Jobs Booked</span></a>
+						<a href="#" class="stats"> 0 <span>Redos</span></a>
+						<a href="#" class="stats"> 0 <span>Canceled</span></a>
+				</div>
+		  
+		  </div>
+		</div>
+		
+		<div class="panel panel-default">
+		  <div class="panel-heading"><i class="far fa-calendar-check"></i> Appointments</div>
+		  <div class="panel-body">
+		  		<div class="appointments">
+					<table class="stripe" id="tblappointment">
+						<thead>
+							<tr>
+								<th>Date</th>
+								<th>Client</th>
+								<th>Estimate</th>
+								<th>Invoice</th>
+							</tr>
+						</thead>
+						
+						<tbody>
+							<tr>
+								<td>Apr. 01, 2019 8:00AM</td>
+								<td>John R.</td>
+								<td>$105.00</td>
+								<td>$205.00</td>
+							</tr>
+							<tr>
+								<td>Apr. 01, 2019 8:00AM</td>
+								<td>John R.</td>
+								<td>$105.00</td>
+								<td>$205.00</td>
+							</tr>
+							<tr>
+								<td>Apr. 01, 2019 8:00AM</td>
+								<td>John R.</td>
+								<td>$105.00</td>
+								<td>$205.00</td>
+							</tr>
+							<tr>
+								<td>Apr. 01, 2019 8:00AM</td>
+								<td>John R.</td>
+								<td>$105.00</td>
+								<td>$205.00</td>
+							</tr>
+							
+						</tbody>
+					</table>
+				</div>
+		  
+		  </div>
+		</div>
+	
+	</div>
+	
+	<div class="col-md-6">
+		<div class="panel panel-default">
+		  <div class="panel-heading"><i class="fas fa-location-arrow"></i> Shortcuts</div>
+		  <div class="panel-body">
+		  		<div class="shortcuts">
+						<a href="#" class="shortcut"> <i class="fas fa-calculator"></i>  <span>Estimate</span></a>
+						<a href="#" class="shortcut"> <i class="fas fa-file-invoice-dollar"></i>  <span>Invoice</span></a>
+						<a href="#" class="shortcut"> <i class="fas fa-chart-line"></i>  <span>Marketing</span></a>
+						<a href="#" class="shortcut"> <i class="fas fa-hand-holding-usd"></i> <span>Payroll</span></a>
+						<a href="#" class="shortcut"> <i class="fas fa-address-book"></i>  <span>Booking</span></a>
+				</div>
+		  
+		  </div>
+		</div>
+	
+	</div>
+ 
+ 
+ </div>
+
+
+{% endblock %}
